@@ -1,3 +1,7 @@
+[![Latest Stable Version](https://poser.pugx.org/netoxygen/proxypay/v/stable)](https://packagist.org/packages/netoxygen/proxypay)
+[![Build Status](https://travis-ci.org/NetOxygen/proxypay.svg?branch=master)](https://travis-ci.org/NetOxygen/proxypay)
+[![Coverage Status](https://coveralls.io/repos/github/NetOxygen/proxypay/badge.svg?branch=master)](https://coveralls.io/github/NetOxygen/proxypay?branch=master)
+
 # ProxyPay library
 
 Provides methods to compose SHA signatures and to check [ProyPay](https://proxypay.ch/) responses.
