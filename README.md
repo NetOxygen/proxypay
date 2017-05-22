@@ -85,4 +85,6 @@ if ($response->is_valid()) {
             // An error occured
             break;
 } else {
+    // Bad request: throw away
+}
 ```
