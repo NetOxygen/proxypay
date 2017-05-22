@@ -4,7 +4,7 @@
     "type": "library",
     "homepage": "https://github.com/NetOxygen/proxypay.git",
     "keywords": ["proxypay", "payment", "sha"],
-    "version": "1.5.0",
+    "version": "1.6.1",
     "autoload": {
         "psr-4": {
             "Netoxygen\\": "src/Netoxygen/"
