@@ -6,6 +6,8 @@
 
 Provides methods to compose SHA signatures and to check [ProyPay](https://proxypay.ch/) responses.
 
+Full documentation can be found [here](doc/doc.md)
+
 ## Requirements:
 
 - PHP 5.5+
@@ -66,8 +68,21 @@ use Netoxygen\ProxyPay\PaymentResponse;
 
 $response = new PaymentResponse($_GET, 'my_key_out');
 if ($response->is_valid()) {
-    // Complete the transaction on your side
+    // $response signature is verified, now check the transaction status
+    $params         = $response->get_parameters();
+    $payment_status = $params['STATUS'];
+    switch($payment_status) {
+        case 'SUCCESS':
+            // Complete the transaction on your side
+            break;
+  
+        case 'CANCEL':
+            // The transaction has been cancelled by the user
+            break;
+  
+        case 'ERROR':   /* FALLTHROUGH */
+        default:
+            // An error occured
+            break;
 } else {
-    // Bad request: throw away
-}
 ```
