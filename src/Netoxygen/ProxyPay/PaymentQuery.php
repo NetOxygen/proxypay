@@ -46,7 +46,7 @@ abstract class PaymentQuery
             return false;
         }
 
-        return hash_equals($sha_sign, $this->compose_sha_sign());
+        return Utils::hash_equals($sha_sign, $this->compose_sha_sign());
     }
 
     /**
