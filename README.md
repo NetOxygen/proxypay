@@ -32,7 +32,7 @@ You have been provided two keys:
 ## Usage
 ### Signing your requests to ProxyPay
 You have to add in your request a param named **sha_sign** (or SHA_SIGN).
-The easier way to sign your requests is to use the `Paymentrequest` class.
+The easier way to sign your requests is to use the `PaymentRequest` class.
 
 ```php
 use Netoxygen\ProxyPay\PaymentRequest;
@@ -48,7 +48,7 @@ use Netoxygen\ProxyPay\PaymentRequest;
   *
   * All the other parameters will be filtered.
   */
-$request = new PaymentRequest($_POST, 'my_key_in'));
+$request = new PaymentRequest($_POST, 'my_key_in');
 
 // You can loop over all your parameters in the $request
 foreach ($request->get_parameters() as $key => $value) {
