@@ -22,6 +22,8 @@ class ParametersFilterTest extends PHPUnit_Framework_TestCase
             "SUCCESS_URL"               => "https://balidra-payment.neto2.net/payment/test_success",
             "error_url"                 => "https://balidra-payment.neto2.net/payment/test_error",
             "CANCEL_URL"                => "https://balidra-payment.neto2.net/payment/test_cancel",
+            "CALLBACK_URL"              => "https://balidra-payment.neto2.net/callback_url",
+            "CALLBACK_METHOD"           => "POST",
             "fullname"                  => "Belkacem Alidra",
             "ADDRESS"                   => "Avenue d'aïre 56",
             "zip"                       => "1203",
