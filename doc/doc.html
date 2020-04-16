@@ -47,7 +47,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <h1 id="proxypay-payment-platform">Proxypay Payment Platform</h1>
-<p><em>V. 1.6 - 2017-05-22</em></p>
+<p><em>V. 1.7.0 - 2020-04-16</em></p>
 <h2 id="integration-documentation">Integration documentation</h2>
 <h3 id="overview">Overview</h3>
 <p>The Proxypay Payment Platform (PPP) by Net Oxygen allows you to receive payments through other Payment Providers (Postfinance, Credit Cards, Twint) without having an account with them.</p>
@@ -117,10 +117,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>*: <em>Longer values will be truncated</em></p>
 <p><strong>Optional fields</strong></p>
 <p>The optional fields are about the buyer and the language to use for Postfinance</p>
-<table>
+<table style="width:100%;">
 <colgroup>
-<col width="8%" />
-<col width="76%" />
+<col width="12%" />
+<col width="73%" />
 <col width="14%" />
 </colgroup>
 <thead>
@@ -166,6 +166,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <td>Postfinance interface language. Possible values: fr_FR (default), ar_AR, cs_CZ, dk_DK, de_DE, el_GR, es_ES, fi_FI, fr_FR, he_IL, hu_, it_IT, ja_JP, ko_KR, nl_BE, nl_NL, no_NO, pl_PL, pt_PT, ru_RU, se_SE, sk_SK, tr_TR, zh_CN</td>
 <td><em>en_US</em></td>
 </tr>
+<tr class="even">
+<td><strong>callback_url</strong></td>
+<td>The absolute URL where to redirect if the user leave the page before to be redirected to the success_url</td>
+<td><em>https://www.your_website.tld/callback?id=155</em></td>
+</tr>
+<tr class="odd">
+<td><strong>callback_method</strong></td>
+<td>The method which callback_url must be called. Possible values: POST, GET</td>
+<td><em>POST</em></td>
+</tr>
 </tbody>
 </table>
 <p>*: <em>Longer values will be truncated</em></p>
@@ -209,7 +219,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>It can also be found on <a href="https://github.com/NetOxygen/proxypay">Github</a></p>
 <p><strong>Signing your requests</strong></p>
 <p>You have to add in your request a param named <strong>sha_sign</strong> (or SHA_SIGN).</p>
-<p>The easier way to sign your requests is to use the <code>Paymentrequest</code> class.</p>
+<p>The easier way to sign your requests is to use the <code>PaymentRequest</code> class.</p>
 <div class="sourceCode"><pre class="sourceCode php"><code class="sourceCode php"><span class="kw">use</span> Netoxygen\ProxyPay\PaymentRequest<span class="ot">;</span>
 
 <span class="co">/**</span>
@@ -223,7 +233,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="co">  *</span>
 <span class="co">  * All the other parameters will be filtered.</span>
 <span class="co">  */</span>
-<span class="kw">$request</span> = <span class="kw">new</span> PaymentRequest<span class="ot">(</span><span class="kw">$_POST</span><span class="ot">,</span> <span class="st">&#39;my_key_in&#39;</span><span class="ot">));</span>
+<span class="kw">$request</span> = <span class="kw">new</span> PaymentRequest<span class="ot">(</span><span class="kw">$_POST</span><span class="ot">,</span> <span class="st">&#39;my_key_in&#39;</span><span class="ot">);</span>
 
 <span class="co">// You can loop over all your parameters in the $request</span>
 <span class="kw">foreach</span> <span class="ot">(</span><span class="kw">$request</span>-&gt;get_parameters<span class="ot">()</span> <span class="kw">as</span> <span class="kw">$key</span> =&gt; <span class="kw">$value</span><span class="ot">)</span> {
