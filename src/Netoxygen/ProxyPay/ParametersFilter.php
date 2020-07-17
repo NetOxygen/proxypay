@@ -15,7 +15,7 @@ class ParametersFilter
      */
     protected $in_fields = [
         "SELLER", "AMOUNT", "DESCRIPTION", "SUCCESS_URL", "ERROR_URL", "CANCEL_URL", "CALLBACK_URL", "CALLBACK_METHOD",
-        "FULLNAME", "ADDRESS", "ZIP", "CITY", "COUNTRY", "EMAIL", ShaComposer::SHA_SIGN_FIELD
+        "FULLNAME", "ADDRESS", "ZIP", "CITY", "COUNTRY", "EMAIL", "ALIAS", "METHOD", "EXPM", "EXPY", ShaComposer::SHA_SIGN_FIELD
     ];
 
     /**
@@ -24,7 +24,7 @@ class ParametersFilter
      * @var array
      */
     protected $out_fields = [
-        "SELLER", "AMOUNT", "TRX_ID", "STATUS", ShaComposer::SHA_SIGN_FIELD
+        "SELLER", "AMOUNT", "TRX_ID", "STATUS", "ALIAS", "METHOD", "EXPM", "EXPY", ShaComposer::SHA_SIGN_FIELD
     ];
 
     /**
