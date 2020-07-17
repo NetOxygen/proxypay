@@ -47,7 +47,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <h1 id="proxypay-payment-platform">Proxypay Payment Platform</h1>
-<p><em>V. 1.7.0 - 2020-04-16</em></p>
+<p><em>V. 1.8.0 - 2020-07-17</em></p>
 <h2 id="integration-documentation">Integration documentation</h2>
 <h3 id="overview">Overview</h3>
 <p>The Proxypay Payment Platform (PPP) by Net Oxygen allows you to receive payments through other Payment Providers (Postfinance, Credit Cards, Twint) without having an account with them.</p>
@@ -283,6 +283,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             value=&quot;https://www.your_website.tld/error/&quot; /&gt;
     &lt;input type=&quot;hidden&quot; name=&quot;cancel_url&quot;
             value=&quot;https://www.your_website.tld/cancel/&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;callback_url&quot;
+            value=&quot;https://www.your_website.tld/callback/&quot; /&gt;
+    &lt;input type=&quot;hidden&quot; name=&quot;callback_method&quot;
+            value=&quot;POST&quot; /&gt;
     &lt;input type=&quot;hidden&quot; name=&quot;sha_sign&quot;
             value=&quot;5440b26de45174f4a51a35a4acb209ad2fc83fac71a801bfc0afa53b6ad2a002&quot; /&gt;
 
