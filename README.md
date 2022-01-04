@@ -4,7 +4,7 @@
 
 # ProxyPay library
 
-Provides methods to compose SHA signatures and to check [ProyPay](https://proxypay.ch/) responses.
+Provides methods to compose SHA signatures and to check [ProxyPay](https://proxypay.ch/) responses.
 
 Full documentation can be found [here](doc/doc.md)
 
