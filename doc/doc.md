@@ -9,9 +9,9 @@ The Proxypay Payment Platform (PPP) by Net Oxygen allows you to receive payments
 ### Global Workflow
  - 1 - Get the user data on your website
  - 2 - Generate the form to send to the PPP
- - 3 - The PPP redirects the user to Postfinance
+ - 3 - The PPP redirects the user to Datatrans
  - 4 - The user makes the payment
- - 5 - Postfinance redirects the user to the PPP
+ - 5 - Datatrans redirects the user to the PPP
  - 6 - The PPP redirects the user to your website
 
 ### PPP Form
@@ -33,7 +33,7 @@ The form must be submitted with the <strong>POST</strong> method to <strong>http
 
 **Optional fields**
 
-The optional fields are about the buyer and the language to use for Postfinance
+The optional fields are about the buyer and the language to use for Datatrans
 
 | Name                | Description                                                                                                                      | Example                |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------|------------------------|
@@ -45,7 +45,7 @@ The optional fields are about the buyer and the language to use for Postfinance
 | **country**         | Buyer country code, as an <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> 2 characters string. | *CH*                   |
 | **company_name**    | Buyer company name, as a 255\* max characters string.                                                                                    | *Net Oxygen Sàrl*     |
 | **company_vat**    | Buyer company VAT number, as a 32\* max characters string.                                                                                    | *CH123456789*     |
-| **lang**            | Postfinance interface language. Possible values: fr_FR (default), ar_AR, cs_CZ, dk_DK, de_DE, el_GR, es_ES, fi_FI, fr_FR, he_IL, hu_, it_IT, ja_JP, ko_KR, nl_BE, nl_NL, no_NO, pl_PL, pt_PT, ru_RU, se_SE, sk_SK, tr_TR, zh_CN | *en_US*                |
+| **lang**            | Datatrans interface language. Possible values: fr_FR (default), ar_AR, cs_CZ, dk_DK, de_DE, el_GR, es_ES, fi_FI, fr_FR, he_IL, hu_, it_IT, ja_JP, ko_KR, nl_BE, nl_NL, no_NO, pl_PL, pt_PT, ru_RU, se_SE, sk_SK, tr_TR, zh_CN | *en_US*                |
 | **callback_url**    | The absolute URL where to redirect if the user leave the page before to be redirected to the success_url                          | *https://www.your_website.tld/callback?id=155* |
 | **callback_method** | The method which callback_url must be called. Possible values: POST, GET                                                          | *POST*                                         |
 \*: *Longer values will be truncated*
@@ -63,11 +63,8 @@ Sending 0 or omitting the field has the same effect
 | test     | Enable the test mode with the value 1, 0 to disable |
 
 
-### Postfinance page customization
-You can choose, on the Postfinance payment page, the background color and the top left logo.<br>
-
- - To change the background color (white by default), send us the html code: ex: #FF0000 for red.<br/>
- - To change the top left logo, send us your logo  in png format.
+### Datatrans page customization
+Soon...
 
 ### Email notifications
 You can provide us one email address which will receive a notification on each transaction, after the transaction has completed (notification for a succesfull/cancelled/error transaction).
@@ -197,10 +194,18 @@ if ($response->is_valid()) {
         </div>
         <div class="form-group">
             <label for="city" class="col-sm-2 control-label">Ville</label>
-            <div class="col-sm-10"> <input type="text" class="form-control" name="city" placeholder="Cille" /> </div>
+            <div class="col-sm-10"> <input type="text" class="form-control" name="city" placeholder="Ville" /> </div>
         </div>
         <div class="form-group">
             <label for="country" class="col-sm-2 control-label">Pays</label>
             <div class="col-sm-10"> <input type="text" class="form-control" name="country" placeholder="Pays" /> </div>
+        </div>
+        <div class="form-group">
+            <label for="company_name" class="col-sm-2 control-label">Société</label>
+            <div class="col-sm-10"> <input type="text" class="form-control" name="company_name" placeholder="Société" /> </div>
+        </div>
+        <div class="form-group">
+            <label for="company_vat" class="col-sm-2 control-label">Numéro de TVA</label>
+            <div class="col-sm-10"> <input type="text" class="form-control" name="company_vat" placeholder="CH123456789" /> </div>
         </div>
     </form>

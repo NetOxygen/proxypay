@@ -55,9 +55,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li>1 - Get the user data on your website</li>
 <li>2 - Generate the form to send to the PPP</li>
-<li>3 - The PPP redirects the user to Postfinance</li>
+<li>3 - The PPP redirects the user to Datatrans</li>
 <li>4 - The user makes the payment</li>
-<li>5 - Postfinance redirects the user to the PPP</li>
+<li>5 - Datatrans redirects the user to the PPP</li>
 <li>6 - The PPP redirects the user to your website</li>
 </ul>
 <h3 id="ppp-form">PPP Form</h3>
@@ -116,7 +116,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </table>
 <p>*: <em>Longer values will be truncated</em></p>
 <p><strong>Optional fields</strong></p>
-<p>The optional fields are about the buyer and the language to use for Postfinance</p>
+<p>The optional fields are about the buyer and the language to use for Datatrans</p>
 <table style="width:100%;">
 <colgroup>
 <col width="12%" />
@@ -169,11 +169,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <tr class="even">
 <td><strong>company_vat</strong></td>
 <td>Buyer company VAT number, as a 32* max characters string.</td>
-<td><em>Net Oxygen Sàrl</em></td>
+<td><em>CH123456789</em></td>
 </tr>
 <tr class="odd">
 <td><strong>lang</strong></td>
-<td>Postfinance interface language. Possible values: fr_FR (default), ar_AR, cs_CZ, dk_DK, de_DE, el_GR, es_ES, fi_FI, fr_FR, he_IL, hu_, it_IT, ja_JP, ko_KR, nl_BE, nl_NL, no_NO, pl_PL, pt_PT, ru_RU, se_SE, sk_SK, tr_TR, zh_CN</td>
+<td>Datatrans interface language. Possible values: fr_FR (default), ar_AR, cs_CZ, dk_DK, de_DE, el_GR, es_ES, fi_FI, fr_FR, he_IL, hu_, it_IT, ja_JP, ko_KR, nl_BE, nl_NL, no_NO, pl_PL, pt_PT, ru_RU, se_SE, sk_SK, tr_TR, zh_CN</td>
 <td><em>en_US</em></td>
 </tr>
 <tr class="even">
@@ -206,12 +206,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
-<h3 id="postfinance-page-customization">Postfinance page customization</h3>
-<p>You can choose, on the Postfinance payment page, the background color and the top left logo.<br></p>
-<ul>
-<li>To change the background color (white by default), send us the html code: ex: #FF0000 for red.<br/></li>
-<li>To change the top left logo, send us your logo in png format.</li>
-</ul>
+<h3 id="datatrans-page-customization">Datatrans page customization</h3>
+<p>Soon...</p>
 <h3 id="email-notifications">Email notifications</h3>
 <p>You can provide us one email address which will receive a notification on each transaction, after the transaction has completed (notification for a succesfull/cancelled/error transaction).</p>
 <h3 id="request-and-responses-signature">Request and Responses signature</h3>
@@ -318,11 +314,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
     &lt;/div&gt;
     &lt;div class=&quot;form-group&quot;&gt;
         &lt;label for=&quot;city&quot; class=&quot;col-sm-2 control-label&quot;&gt;Ville&lt;/label&gt;
-        &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;city&quot; placeholder=&quot;Cille&quot; /&gt; &lt;/div&gt;
+        &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;city&quot; placeholder=&quot;Ville&quot; /&gt; &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;form-group&quot;&gt;
         &lt;label for=&quot;country&quot; class=&quot;col-sm-2 control-label&quot;&gt;Pays&lt;/label&gt;
         &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;country&quot; placeholder=&quot;Pays&quot; /&gt; &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;company_name&quot; class=&quot;col-sm-2 control-label&quot;&gt;Société&lt;/label&gt;
+        &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;company_name&quot; placeholder=&quot;Société&quot; /&gt; &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;company_vat&quot; class=&quot;col-sm-2 control-label&quot;&gt;Numéro de TVA&lt;/label&gt;
+        &lt;div class=&quot;col-sm-10&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;company_vat&quot; placeholder=&quot;CH123456789&quot; /&gt; &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
 </body>
