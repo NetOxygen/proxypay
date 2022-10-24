@@ -1,5 +1,5 @@
 # Proxypay Payment Platform
-*V. 1.9.0 - 2022-10-24*
+*V. 1.9.1 - 2022-10-24*
 
 ## Integration documentation
 ### Overview
