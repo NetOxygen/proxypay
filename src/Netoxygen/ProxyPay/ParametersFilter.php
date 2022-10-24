@@ -15,7 +15,8 @@ class ParametersFilter
      */
     protected $in_fields = [
         "SELLER", "AMOUNT", "DESCRIPTION", "SUCCESS_URL", "ERROR_URL", "CANCEL_URL", "CALLBACK_URL", "CALLBACK_METHOD",
-        "FULLNAME", "ADDRESS", "ZIP", "CITY", "COUNTRY", "EMAIL", "ALIAS", "METHOD", "EXPM", "EXPY", ShaComposer::SHA_SIGN_FIELD
+        "FULLNAME", "ADDRESS", "ZIP", "CITY", "COUNTRY", "EMAIL", "COMPANY_NAME", "COMPANY_VAT",
+        "ALIAS", "METHOD", "EXPM", "EXPY", ShaComposer::SHA_SIGN_FIELD
     ];
 
     /**

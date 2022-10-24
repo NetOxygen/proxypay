@@ -43,6 +43,8 @@ The optional fields are about the buyer and the language to use for Postfinance
 | **zip**             | Buyer postal code, as an 10\* max characters string.                                                                               | *1203*                 |
 | **city**            | Buyer city, as a 25\* max characters string.                                                                                       | *Genève*               |
 | **country**         | Buyer country code, as an <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a> 2 characters string. | *CH*                   |
+| **company_name**    | Buyer company name, as a 255\* max characters string.                                                                                    | *Net Oxygen Sàrl*     |
+| **company_vat**    | Buyer company VAT number, as a 32\* max characters string.                                                                                    | *CH123456789*     |
 | **lang**            | Postfinance interface language. Possible values: fr_FR (default), ar_AR, cs_CZ, dk_DK, de_DE, el_GR, es_ES, fi_FI, fr_FR, he_IL, hu_, it_IT, ja_JP, ko_KR, nl_BE, nl_NL, no_NO, pl_PL, pt_PT, ru_RU, se_SE, sk_SK, tr_TR, zh_CN | *en_US*                |
 | **callback_url**    | The absolute URL where to redirect if the user leave the page before to be redirected to the success_url                          | *https://www.your_website.tld/callback?id=155* |
 | **callback_method** | The method which callback_url must be called. Possible values: POST, GET                                                          | *POST*                                         |

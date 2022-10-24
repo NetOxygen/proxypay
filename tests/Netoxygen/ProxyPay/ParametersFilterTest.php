@@ -30,6 +30,8 @@ class ParametersFilterTest extends PHPUnit_Framework_TestCase
             "CITY"                      => "Genève",
             "country"                   => "CH",
             "EMAIL"                     => "support@netoxygen.ch",
+            "company_name"              => "Net Oxygen Sàrl",
+            "COMPANY_VAT"               => "CH123456789",
             ShaComposer::SHA_SIGN_FIELD => "a223a1812c02a78cd79c6f0b2e1425ad",
             "UNALLOWED_PARAM"           => "..."
         ];
